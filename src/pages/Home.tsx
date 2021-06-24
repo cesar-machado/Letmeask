@@ -46,7 +46,7 @@ export default function Home() {
         <strong> Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
-      <main>
+      <main className="main-auth">
         <div className="main-content">
           <img src={LogoImg} alt="letmeask" />
           <button onClick={handleNewRoom} className="create-room">
