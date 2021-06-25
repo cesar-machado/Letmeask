@@ -9,8 +9,11 @@
 </h4>
 
 <h4 align="center"> Tela do Usuário</h4>
+
 ![Let Me Ask preview](.github/TelaAdmin)
+
 <h4 align="center"> Tela do criador da sala ou admin</h4>
+
 ![Let Me Ask preview](.github/TelaUsuario)
 
 ## Tecnologias usadas nesse projeto.
