@@ -4,6 +4,54 @@
   height: 100vh;
 }
 
+.toggle {
+  margin-left: 250px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 9px;
+  border: 0;
+  width: 50px;
+  height: 30px;
+  background: #f8f8f8;
+  font-size: 25px;
+}
+
+.dark {
+  background: #333333;
+
+  aside {
+    flex: 6;
+
+    background: #333333;
+    color: #fff;
+  }
+
+  .main-content input {
+    background: #333333;
+    // color: #fff;
+  }
+  .main-content input::placeholder {
+    // background: #333333;
+    color: #fff;
+  }
+  .toggle {
+    border-radius: 9px;
+    width: 50px;
+    background: #333333;
+    border: 0;
+  }
+
+  .sun {
+    margin-top: 2px;
+    color: #f2c94c;
+    font-size: 25px;
+  }
+
+  .moon {
+    font-size: 25px;
+  }
+}
+
 aside {
   flex: 6;
 
@@ -92,7 +140,7 @@ strong {
   }
 
   .create-room {
-    margin-top: 64px;
+    margin-top: 40px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
