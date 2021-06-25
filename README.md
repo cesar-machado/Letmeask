@@ -10,11 +10,11 @@
 
 <h4 align="center"> Tela do Usuário</h4>
 
-![Let Me Ask preview](.github/TelaAdmin)
+![Let Me Ask preview](./.github/TelaAdmin)
 
 <h4 align="center"> Tela do criador da sala ou admin</h4>
 
-![Let Me Ask preview](.github/TelaUsuario)
+![Let Me Ask preview](./.github/TelaUsuario)
 
 ## Tecnologias usadas nesse projeto.
 
@@ -25,7 +25,7 @@
 
 ### Requerimentos para que você veja o projeto.
 
-- Você Precisa instalar o [Node.js](https://nodejs.org/en/download/) e [Yarn](https://yarnpkg.com/) ou pode usar o [Npm] que já vem quando você instala o Nodejs.
+- Você Precisa instalar o [Node.js](https://nodejs.org/en/download/) e [Yarn](https://yarnpkg.com/) ou pode usar o Npm que já vem quando você instala o Nodejs.
 
 **Clone o projeto e entre na pasta**
 
