@@ -10,11 +10,11 @@
 
 <h4 align="center"> Tela do Usuário</h4>
 
-![Let Me Ask preview](./.github/TelaAdmin)
+<img src=".github/TelaUsuario.png" alt="Tela do usuario">
 
 <h4 align="center"> Tela do criador da sala ou admin</h4>
 
-![Let Me Ask preview](./.github/TelaUsuario)
+<img src=".github/TelaAdmin.png" alt="tela do admin">
 
 ## Tecnologias usadas nesse projeto.
 
