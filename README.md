@@ -53,4 +53,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Feito com muito 💜 by César Machado 👋 [Check out my LinkedIn](https://www.linkedin.com/in/cesar-mach/)
+Feito com muito 💜 by César Machado 👋 [Meu LinkedIn](https://www.linkedin.com/in/cesar-mach/)
