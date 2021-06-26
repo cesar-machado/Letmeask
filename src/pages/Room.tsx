@@ -1,7 +1,8 @@
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
-import logoImg from "../assets/images/logo.svg";
+import LogoImg from "../assets/images/logo.svg";
+import LogoBranco from "../assets/images/logo-branco.svg";
 import Button from "../components/Button";
 import { Questions } from "../components/Question";
 import RoomCode from "../components/RoomCode";
@@ -9,6 +10,9 @@ import { useAuth } from "../hooks/useAuth";
 import { useRoom } from "../hooks/useRoom";
 import { database } from "../services/firebase";
 import "../styles/room.scss";
+import { useTheme } from "../hooks/useTheme";
+import { MdWbSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
 type RoomParams = {
   id: string;
@@ -20,6 +24,7 @@ export default function Room() {
   const roomId = params.id;
   const [newQuestion, setNewQuestion] = useState("");
   const { title, questions } = useRoom(roomId);
+  const { theme, toggleTheme } = useTheme();
 
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -72,11 +77,20 @@ export default function Room() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
-          <RoomCode code={roomId} />
+          <img src={theme === "dark" ? LogoBranco : LogoImg} alt="letmeask" />
+          <div className="head">
+            <RoomCode code={roomId} />
+            <button onClick={toggleTheme} className="toggle">
+              {theme === "dark" ? (
+                <MdWbSunny className="sun" />
+              ) : (
+                <FaMoon className="moon" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 

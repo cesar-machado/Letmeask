@@ -25,25 +25,139 @@
         }
       }
 
+      .toggle {
+        margin-left: 10px;
+        // margin-top: 10px;
+        margin-bottom: 0px;
+        border-radius: 9px;
+        border: none;
+        width: 50px;
+        // height: 30px;
+        background: none;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .room-title {
+    margin: 32px 0 24px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      color: #29292e;
+    }
+
+    span {
+      margin-left: 16px;
+      background: #e559f9;
+      border-radius: 9999px;
+      padding: 8px 16px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  form {
+    textarea {
+      width: 100%;
+      border: 0;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fefefe;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      font-size: 50px;
+
+      .user-info {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+
+        span {
+          margin-left: 8px;
+          color: #29292e;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+
+      > span {
+        font-size: 14px;
+        color: #737380;
+        font-weight: 500;
+
+        button {
+          background: transparent;
+          border: 0;
+          color: #835afd;
+          text-decoration: underline;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
       .btn {
-        width: 32%;
+        width: 20%;
+        height: 40px;
+        font-size: 14px;
       }
     }
   }
 
+  .question-list {
+    margin-top: 50px;
+  }
+}
+
+.dark {
+  background: #333333;
+  height: 120vh;
+
+  .toggle {
+    border-radius: 9px;
+    width: 50px;
+    background: #333333;
+    border: 0;
+  }
+
+  .sun {
+    margin-top: 2px;
+    color: #f2c94c;
+    font-size: 25px;
+    background: none;
+  }
+
+  .moon {
+    font-size: 25px;
+    background: none;
+  }
+
   main {
-    max-width: 800px;
-    margin: 0 auto;
-
     .room-title {
-      margin: 32px 0 24px;
-      display: flex;
-      align-items: center;
-
       h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 24px;
-        color: #29292e;
+        color: #fff;
       }
 
       span {
@@ -60,13 +174,17 @@
     form {
       textarea {
         width: 100%;
-        border: 0;
+        border: 1 solid #fff;
         padding: 16px;
         border-radius: 8px;
-        background: #fefefe;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        background: #29292e;
+        box-shadow: 0 2px 12px rgba(225, 225, 225, 0.1);
         resize: vertical;
         min-height: 130px;
+      }
+
+      textarea::placeholder {
+        color: #fff;
       }
 
       .form-footer {
@@ -77,18 +195,9 @@
         font-size: 50px;
 
         .user-info {
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-          }
-
           span {
             margin-left: 8px;
-            color: #29292e;
+            color: #fff;
             font-weight: 500;
             font-size: 14px;
           }
@@ -119,6 +228,472 @@
 
     .question-list {
       margin-top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #page-room {
+    overflow: hidden;
+
+    header {
+      padding: 15px;
+      border-bottom: 1px solid #e2e2e2;
+
+      .content {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > img {
+          max-height: 45px;
+        }
+
+        > div {
+          display: flex;
+          gap: 16px;
+
+          button {
+            height: 40px;
+            width: 100%;
+            font-size: small;
+          }
+        }
+
+        .btn {
+          width: 32%;
+        }
+      }
+    }
+    .head {
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  main {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .room-title {
+      h1 {
+        font-size: 19px;
+        color: #29292e;
+      }
+
+      span {
+        margin-left: 16px;
+        background: #e559f9;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+
+    form {
+      textarea {
+        width: 100%;
+        border: 0;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        resize: vertical;
+        min-height: 60px;
+      }
+
+      .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 50px;
+
+        .user-info {
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 8px;
+            color: #29292e;
+            font-weight: 500;
+            font-size: 13px;
+          }
+        }
+
+        > span {
+          font-size: 15px;
+          color: #737380;
+          font-weight: 500;
+
+          button {
+            background: transparent;
+            border: 0;
+            color: #835afd;
+            text-decoration: underline;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+        .btn {
+          width: 20%;
+          height: 40px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .question-list {
+      margin-top: 50px;
+    }
+  }
+
+  .dark {
+    background: #333333;
+
+    .toggle {
+      border-radius: 9px;
+      width: 50px;
+      background: #333333;
+      border: 0;
+    }
+
+    .sun {
+      margin-top: 2px;
+      color: #f2c94c;
+      font-size: 25px;
+      background: none;
+    }
+
+    .moon {
+      font-size: 25px;
+      background: none;
+    }
+
+    main {
+      .room-title {
+        h1 {
+          color: #fff;
+        }
+
+        span {
+          margin-left: 16px;
+          background: #e559f9;
+          border-radius: 9999px;
+          padding: 8px 16px;
+          color: #fff;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+
+      form {
+        textarea {
+          width: 100%;
+          border: 1 solid #fff;
+          padding: 16px;
+          border-radius: 8px;
+          background: #29292e;
+          box-shadow: 0 2px 12px rgba(225, 225, 225, 0.1);
+          resize: vertical;
+          min-height: 130px;
+        }
+
+        textarea::placeholder {
+          color: #fff;
+        }
+
+        .form-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 16px;
+          font-size: 50px;
+
+          .user-info {
+            span {
+              margin-left: 8px;
+              color: #fff;
+              font-weight: 500;
+              font-size: 14px;
+            }
+          }
+
+          > span {
+            font-size: 14px;
+            color: #737380;
+            font-weight: 500;
+
+            button {
+              background: transparent;
+              border: 0;
+              color: #835afd;
+              text-decoration: underline;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+            }
+          }
+          .btn {
+            width: 20%;
+            height: 40px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .question-list {
+        margin-top: 50px;
+        height: 100vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  #page-room {
+    overflow: hidden;
+
+    header {
+      padding: 10px 15px;
+      border-bottom: 1px solid #e2e2e2;
+
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+          max-height: 30px;
+          margin-left: 50px;
+          margin-right: 20px;
+        }
+
+        > div {
+          display: flex;
+          gap: 16px;
+
+          button {
+            height: 30px;
+            width: 60%;
+            font-size: small;
+          }
+        }
+
+        .btn {
+          width: 32%;
+        }
+      }
+    }
+    .head {
+      display: flex;
+      align-items: flex-end;
+      margin-left: 20px;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-right: 15px;
+      }
+    }
+  }
+
+  main {
+    max-width: 300px;
+    margin: 0 auto;
+
+    .room-title {
+      h1 {
+        font-size: 14px;
+        color: #29292e;
+      }
+
+      span {
+        margin-left: 16px;
+        background: #e559f9;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 10px;
+      }
+    }
+
+    form {
+      textarea {
+        width: 100%;
+        border: 0;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        resize: vertical;
+        min-height: 60px;
+      }
+
+      .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 25px;
+
+        .user-info {
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 8px;
+            color: #29292e;
+            font-weight: 500;
+            font-size: 13px;
+          }
+        }
+
+        > span {
+          font-size: 15px;
+          color: #737380;
+          font-weight: 500;
+
+          button {
+            background: transparent;
+            border: 0;
+            color: #835afd;
+            text-decoration: underline;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+        .btn {
+          width: 30%;
+          height: 40px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .question-list {
+      margin-top: 50px;
+    }
+  }
+
+  .dark {
+    background: #333333;
+
+    .toggle {
+      border-radius: 9px;
+      width: 50px;
+      background: #333333;
+      border: 0;
+    }
+
+    .sun {
+      margin-top: 2px;
+      color: #f2c94c;
+      font-size: 25px;
+      background: none;
+    }
+
+    .moon {
+      font-size: 25px;
+      background: none;
+    }
+
+    main {
+      .room-title {
+        h1 {
+          color: #fff;
+        }
+
+        span {
+          margin-left: 16px;
+          background: #e559f9;
+          border-radius: 9999px;
+          padding: 8px 16px;
+          color: #fff;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+
+      form {
+        textarea {
+          width: 100%;
+          border: 1 solid #fff;
+          padding: 16px;
+          border-radius: 8px;
+          background: #29292e;
+          box-shadow: 0 2px 12px rgba(225, 225, 225, 0.1);
+          resize: vertical;
+          min-height: 130px;
+        }
+
+        textarea::placeholder {
+          color: #fff;
+        }
+
+        .form-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 16px;
+          font-size: 50px;
+
+          .user-info {
+            span {
+              margin-left: 8px;
+              color: #fff;
+              font-weight: 500;
+              font-size: 14px;
+            }
+          }
+
+          > span {
+            font-size: 14px;
+            color: #737380;
+            font-weight: 500;
+
+            button {
+              background: transparent;
+              border: 0;
+              color: #835afd;
+              text-decoration: underline;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+            }
+          }
+          .btn {
+            width: 20%;
+            height: 40px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .question-list {
+        margin-top: 50px;
+        height: 100vh;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import illustrationImg from "../assets/images/illustration.svg";
 import LogoImg from "../assets/images/logo.svg";
+import LogoBranco from "../assets/images/logo-branco.svg";
 // import googleIconImg from "../assets/images/google-icon.svg";
 
 import "../styles/auth.scss";
@@ -9,11 +10,16 @@ import { FormEvent } from "react";
 import { useState } from "react";
 import { database } from "../services/firebase";
 import { useAuth } from "../hooks/useAuth";
+import { MdWbSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
+import { useTheme } from "../hooks/useTheme";
 
 export default function NewRoom() {
   const { user } = useAuth();
   const history = useHistory();
   const [newRoom, setNewRoom] = useState("");
+  const { theme, toggleTheme } = useTheme();
+
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
 
@@ -31,7 +37,7 @@ export default function NewRoom() {
     history.push(`/rooms/${firebaseRoom.key}`);
   }
   return (
-    <div id="page-auth">
+    <div id="page-auth" className={theme}>
       <aside>
         <img src={illustrationImg} alt="illustration" />
         <strong> Crie salas de Q&amp;A ao-vivo</strong>
@@ -39,7 +45,14 @@ export default function NewRoom() {
       </aside>
       <main className="main-auth">
         <div className="main-content">
-          <img src={LogoImg} alt="letmeask" />
+          <img src={theme === "dark" ? LogoBranco : LogoImg} alt="letmeask" />
+          <button onClick={toggleTheme} className="toggle">
+            {theme === "dark" ? (
+              <MdWbSunny className="sun" />
+            ) : (
+              <FaMoon className="moon" />
+            )}
+          </button>
           <h2>Crie uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input

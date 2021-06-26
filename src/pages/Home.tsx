@@ -1,4 +1,5 @@
 import illustrationImg from "../assets/images/illustration.svg";
+import LogoBranco from "../assets/images/logo-branco.svg";
 import LogoImg from "../assets/images/logo.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 import { MdWbSunny } from "react-icons/md";
@@ -58,7 +59,7 @@ export default function Home() {
 
       <main className="main-auth">
         <div className="main-content">
-          <img src={LogoImg} alt="letmeask" />
+          <img src={theme === "dark" ? LogoBranco : LogoImg} alt="letmeask" />
           <button onClick={toggleTheme} className="toggle">
             {theme === "dark" ? (
               <MdWbSunny className="sun" />

@@ -34,3 +34,17 @@
     cursor: not-allowed;
   }
 }
+
+@media only screen and (max-width: 860px) {
+  .btn {
+    height: 34px;
+    font-size: 15px;
+  }
+
+  &.outlined {
+    background: #fff;
+    border: 1px solid #835afd;
+    color: #835afd;
+    // font-size: 14px;
+  }
+}

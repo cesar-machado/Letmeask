@@ -79,3 +79,26 @@
     }
   }
 }
+
+.dark {
+  .question {
+    background: #29292e;
+    color: #fff;
+    p {
+      color: #fff;
+    }
+
+    &.highlighted {
+      footer .user-info span {
+        color: #fff;
+      }
+    }
+    &.answered {
+      // background: #dbdcdd;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import deleteImg from "../assets/images/delete.svg";
-import logoImg from "../assets/images/logo.svg";
 import checkImg from "../assets/images/check.svg";
 import answerImg from "../assets/images/answer.svg";
+import LogoImg from "../assets/images/logo.svg";
+import LogoBranco from "../assets/images/logo-branco.svg";
 
 import Button from "../components/Button";
 import { useHistory, useParams } from "react-router-dom";
@@ -10,6 +11,9 @@ import RoomCode from "../components/RoomCode";
 import { useRoom } from "../hooks/useRoom";
 import "../styles/room.scss";
 import { database } from "../services/firebase";
+import { useTheme } from "../hooks/useTheme";
+import { MdWbSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
 type RoomParams = {
   id: string;
@@ -20,6 +24,7 @@ export default function AdminRoom() {
   const params = useParams<RoomParams>();
   const roomId = params.id;
   const { title, questions } = useRoom(roomId);
+  const { theme, toggleTheme } = useTheme();
 
   async function handleEndRoom() {
     database.ref(`rooms/${roomId}`).update({
@@ -48,15 +53,22 @@ export default function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
-          <div>
+          <img src={theme === "dark" ? LogoBranco : LogoImg} alt="letmeask" />
+          <div className="head">
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>
               Encerrar Sala
             </Button>
+            <button onClick={toggleTheme} className="toggle">
+              {theme === "dark" ? (
+                <MdWbSunny className="sun" />
+              ) : (
+                <FaMoon className="moon" />
+              )}
+            </button>
           </div>
         </div>
       </header>

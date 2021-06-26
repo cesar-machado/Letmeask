@@ -8,13 +8,15 @@
   Let Me Ask é uma plataforma aonde você pode fazer perguntas sobre um assunto e os usuários poderão responder, votar pelas melhores perguntas e o mais importante poderão ajudar outras pessoas que estão com dúvidas.
 </h4>
 
-<h4 align="center"> Tela do Usuário</h4>
+<h4 align="center"> Tela do Usuário, Tela do criador da sala ou admin, light e dark mode</h4>
 
 <img src=".github/TelaUsuario.png" alt="Tela do usuario">
+<img src=".github/TelaUsuario-dark.png" alt="Tela do usuario">
 
-<h4 align="center"> Tela do criador da sala ou admin</h4>
+<h4 align="center"> Tela do criador da sala ou admin, light e dark mode.</h4>
 
 <img src=".github/TelaAdmin.png" alt="tela do admin">
+<img src=".github/TelaAdmin=dark.png" alt="tela do admin">
 
 ## Tecnologias usadas nesse projeto.
 
