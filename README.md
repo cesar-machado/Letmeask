@@ -25,8 +25,8 @@
 
 <h4 align="center"> Responsividade aplicada no projeto</h4>
 
-<img src=".github/Responsive-light.png" alt="tela do admin">
-<img src=".github/Responsive-dark.png" alt="tela do admin">
+<img src=".github/Responsive-light.png" alt="tela responsiva">
+<img src=".github/Responsive-Dark.png" alt="tela responsiva">
 
 ## Tecnologias usadas nesse projeto.
 
