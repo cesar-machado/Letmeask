@@ -47,7 +47,7 @@
 $ git clone https://github.com/cesar-machado/Letmeask && cd letmeask
 ```
 
-**Siga os passo abaixo para rodar o projeto**
+**Siga os passos abaixo para rodar o projeto**
 
 ```bash
 # Install the dependencies
